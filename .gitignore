@@ -1,0 +1,13 @@
+# IDEs
+.idea/
+.vscode/
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Arquivos sensíveis (opcional futuramente)
+.env
+
+# Logs
+*.log

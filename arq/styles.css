@@ -20,6 +20,7 @@ form {
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 input,
@@ -29,7 +30,8 @@ select {
     border-radius: 4px;
     border: 1px solid #cfd6dd;
     font-size: 14px;
-    min-width: 200px;
+    min-width: 180px;
+    flex: 1;
 }
 
 #numeroSerie {

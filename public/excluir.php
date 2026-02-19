@@ -5,12 +5,9 @@ error_reporting(E_ALL);
 
 require_once '../config/conexao.php';
 
-$id = (int) $_GET['id'];
+$id = intval($_GET['id']);
 
-$stmt = $conn->prepare(
-  "DELETE FROM controle_maquinas WHERE id = ?"
-);
-$stmt->bind_param("i", $id);
-$stmt->execute();
+mysqli_query($conn, "DELETE FROM controle_maquinas WHERE id = $id");
 
 header("Location: index.php");
+exit;

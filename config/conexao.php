@@ -4,8 +4,10 @@ $usuario = "root";
 $senha = "";
 $banco = "controle_de_maquinas";
 
-$conn = new mysqli($host, $usuario, $senha, $banco);
+$conn = mysqli_connect($host, $usuario, $senha, $banco);
 
-if ($conn->connect_error) {
-  die("Erro na conexão com o banco de dados");
+if (!$conn) {
+    die("Erro na conexão: " . mysqli_connect_error());
 }
+
+mysqli_query($conn, "SET NAMES 'utf8'");
